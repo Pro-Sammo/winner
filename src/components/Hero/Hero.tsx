@@ -1,7 +1,6 @@
 "use client";
 
 // import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
 // import Image1 from "../../../public/image1.jpg";
 // import Image2 from "../../../public/image2.jpg";
 // import Image3 from "../../../public/image3.png";
@@ -14,17 +13,22 @@ import Image from "next/image";
 //   EffectFade,
 //   Autoplay,
 // } from "swiper/modules";
-import HeatPress from "../../../public/press-removebg-preview.png";
+import machinerievector from "../../../public/machinerievector.jpg"
+import HeatPress from "../../../public/heatpress.svg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
+import Image from "next/image";
 const Hero = () => {
   return (
     <>
-      <div className="mb-10 w-full h-screen  flex justify-center items-center ">
-        <div className="text-xl -mt-24 md:text-7xl font-semibold">Unleash Precision with Our Heat Press Machinery</div>
+      <div className="mb-10 w-full h-screen  flex justify-center items-center bg-[#FAFAF9]">
+        <div className="text-xl -mt-24 md:text-4xl xl:text-5xl font-semibold" style={{ fontFamily: "GeneralSans" }}>Unleash Precision with Our Machinery</div>
+        <div>
+          <Image src={HeatPress} alt="vector"/>
+        </div>
       </div>
     </>
   );

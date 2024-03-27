@@ -16,13 +16,13 @@ const Carousel = () => {
   const swiperRef = useRef(null);
 
   const goNext = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
+    if (swiperRef.current && swiperRef.current?.swiper) {
       swiperRef.current.swiper.slideNext();
     }
   };
 
   const goPrev = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
+    if (swiperRef.current && swiperRef.current?.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
   };

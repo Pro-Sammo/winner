@@ -74,3 +74,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: "Cabinet";
+  src: url("../../public/fonts/CabinetGrotesk-Variable.ttf");
+}
+
+@font-face {
+  font-family: "GeneralSans";
+  src: url("../../public/fonts/GeneralSans-Variable.ttf");
+}
+
+@font-face {
+  font-family: "Cabinet-Extrabold";
+  src: url("../../public/fonts/CabinetGrotesk-Extrabold.ttf");
+}
