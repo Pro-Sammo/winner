@@ -27,7 +27,7 @@ const Page = ({ params }: { params: { slug: string } }) => {
       const result = response.data
       toast(result?.message)
     } catch (error) {
-      toast(error?.response?.data?.message ?? "An error occurred");
+      toast("Upload failed");
 
     }
   };
