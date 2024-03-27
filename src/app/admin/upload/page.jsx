@@ -19,7 +19,7 @@ const Page = () => {
   const [loading, setLoading] = useState(false);
 
 
-  const submitHandler = async (e: any) => {
+  const submitHandler = async (e)=>{
     e.preventDefault();
     setLoading(true)
    try {
@@ -44,7 +44,7 @@ const Page = () => {
     setLoading(false)
     toast("Created Successfully")
    } catch (error) {
-    toast(error?.response?.data?.message)
+    toast("Failed to upload")
     setLoading(false)
    }
   };

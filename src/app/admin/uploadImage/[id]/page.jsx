@@ -5,7 +5,7 @@ import axios from "axios";
 import { CldImage } from "next-cloudinary";
 import { toast } from "sonner";
 
-const Page = ({ params }: { params: { slug: string } }) => {
+const Page = ({ params }) => {
   const [resource, setResource] = useState();
   console.log(resource);
   const id = params.id;
