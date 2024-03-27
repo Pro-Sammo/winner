@@ -15,7 +15,7 @@ const Dashboad = () => {
       const result = response.data;
       setData(result);
     } catch (error) {
-      toast(error?.response?.data?.message);
+      toast(error?.response?.data?.message ?? "An error occurred");
     }
   };
   useEffect(() => {
