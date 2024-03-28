@@ -8,6 +8,7 @@ import Showcase from "@/components/Showcase/Showcase";
 export default function Home() {
   return (
     <>
+    <div>
       <Hero />
       <Showcase />
       <Card />
@@ -16,6 +17,7 @@ export default function Home() {
       <Carousel />
       <Contact />
       <Footer/>
+      </div>
     </>
   );
 }

@@ -35,4 +35,40 @@ export const data = [
     description: "Semi Auto Sublimation Heat Press Size",
     size: '24"X36"',
   },
+  {
+    id: 4,
+    productImage:
+      "https://res.cloudinary.com/dazbl9wxi/image/upload/f_auto,q_auto/pxmmexnaky2sbfojcdcr",
+    images: [],
+    title: "EC-2436SB",
+    description: "Semi Auto Sublimation Heat Press Size",
+    size: '24"X36"',
+  },
+  {
+    id: 4,
+    productImage:
+      "https://res.cloudinary.com/dazbl9wxi/image/upload/f_auto,q_auto/pxmmexnaky2sbfojcdcr",
+    images: [],
+    title: "EC-2436SB",
+    description: "Semi Auto Sublimation Heat Press Size",
+    size: '24"X36"',
+  },
+  {
+    id: 4,
+    productImage:
+      "https://res.cloudinary.com/dazbl9wxi/image/upload/f_auto,q_auto/pxmmexnaky2sbfojcdcr",
+    images: [],
+    title: "EC-2436SB",
+    description: "Semi Auto Sublimation Heat Press Size",
+    size: '24"X36"',
+  },
+  {
+    id: 4,
+    productImage:
+      "https://res.cloudinary.com/dazbl9wxi/image/upload/f_auto,q_auto/pxmmexnaky2sbfojcdcr",
+    images: [],
+    title: "EC-2436SB",
+    description: "Semi Auto Sublimation Heat Press Size",
+    size: '24"X36"',
+  },
 ];

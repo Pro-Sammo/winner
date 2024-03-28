@@ -89,3 +89,26 @@
   font-family: "Cabinet-Extrabold";
   src: url("../../public/fonts/CabinetGrotesk-Extrabold.ttf");
 }
+
+
+::-webkit-scrollbar {
+  /* Customize the scrollbar width */
+  width: 10px;
+  height: 24px;
+  border-radius: 100%;
+}
+
+::-webkit-scrollbar-track {
+  /* Customize the scrollbar track */
+  background-color: rgb(229, 225, 225);
+}
+
+::-webkit-scrollbar-thumb {
+  /* Customize the scrollbar thumb */
+  background-color: orange;
+}
+
+
+.scrollbarcard::-webkit-scrollbar{
+  height: 4px;
+}

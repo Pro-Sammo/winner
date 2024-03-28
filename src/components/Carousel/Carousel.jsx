@@ -16,13 +16,13 @@ const Carousel = () => {
   const swiperRef = useRef(null);
 
   const goNext = () => {
-    if (swiperRef.current && swiperRef.current?.swiper) {
+    if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideNext();
     }
   };
 
   const goPrev = () => {
-    if (swiperRef.current && swiperRef.current?.swiper) {
+    if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slidePrev();
     }
   };
@@ -101,18 +101,12 @@ const Carousel = () => {
             </SwiperSlide>
           </Swiper>
           <div className="flex justify-between mt-4">
-            <div
-              className="cursor-pointer bg-[#2457AA] p-2 rounded-full z-10"
-              onClick={goPrev}
-            >
-              <ArrowLeft size={20} color="white"/>
-            </div>
-            <div
-              onClick={goNext}
-              className="cursor-pointer bg-[#2457AA]  p-2 rounded-full"
-            >
-              <ArrowRight color="white" size={20} />
-            </div>
+          
+              <ArrowLeft  color="orange" className="cursor-pointer z-20" size={30} onClick={goPrev}/>
+            
+            
+              <ArrowRight color="orange" className="cursor-pointer" size={30} onClick={goNext} />
+           
           </div>
         </div>
       </div>
