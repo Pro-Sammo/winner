@@ -7,7 +7,6 @@ export async function POST(req, params) {
     connectDB()
     const id = params.params.id;
     const {public_id,url} =await req.json()
-    console.log(public_id,url)
 
     const updatedItem = await Item.findByIdAndUpdate(id,{
        $push:{

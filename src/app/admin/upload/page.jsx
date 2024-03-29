@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
-import { toast } from "sonner"
+import { toast } from "sonner";
 
 const Page = () => {
   const [model, setModel] = useState("");
@@ -17,37 +17,56 @@ const Page = () => {
   const [time, setTime] = useState("");
   const [speed, setSpeed] = useState("");
   const [loading, setLoading] = useState(false);
+  const [category, setCategory] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
 
-
-  const submitHandler = async (e)=>{
+  const submitHandler = async (e) => {
     e.preventDefault();
-    setLoading(true)
-   try {
-    const response = await axios.post("/api/v1/admin/additem", {
-      model: model,
-      brand: brand,
-      shortDescription: shortDescription,
-      longDescription: longDescription,
-      size:size,
-      voltage:voltage,
-      power:power,
-      temperature:temperature,
-      time:time,
-      speed:speed,
-    },{
-      headers:{
-        "Content-Type":"application/json"
-      }
-    });
-    const result = response.data;
-    console.log(result)
-    setLoading(false)
-    toast("Created Successfully")
-   } catch (error) {
-    toast("Failed to upload")
-    setLoading(false)
-   }
+    setLoading(true);
+    try {
+      const response = await axios.post(
+        "/api/v1/admin/additem",
+        {
+          model: model,
+          brand: brand,
+          shortDescription: shortDescription,
+          longDescription: longDescription,
+          size: size,
+          voltage: voltage,
+          power: power,
+          temperature: temperature,
+          time: time,
+          speed: speed,
+          category:selectedCategory
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const result = response.data;
+      setLoading(false);
+      toast("Created Successfully");
+    } catch (error) {
+      toast("Failed to upload");
+      setLoading(false);
+    }
   };
+
+  const getAllCategory = async () => {
+    try {
+      const res = await axios.get("/api/v1/admin/getcategory");
+      const result = res.data;
+      setCategory(result);
+    } catch (error) {
+      toast(error?.response?.data?.message);
+    }
+  };
+
+  useEffect(() => {
+    getAllCategory();
+  }, []);
 
   return (
     <>
@@ -58,6 +77,7 @@ const Page = () => {
         >
           <label htmlFor="model">Model</label>
           <input
+            value={model}
             onChange={(e) => setModel(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
@@ -66,6 +86,7 @@ const Page = () => {
           />
           <label htmlFor="Brand">Brand</label>
           <input
+            value={brand}
             onChange={(e) => setBrand(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
@@ -74,6 +95,7 @@ const Page = () => {
           />
           <label htmlFor="shortdescription">Short Description</label>
           <input
+            value={shortDescription}
             onChange={(e) => setShortDescription(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
@@ -82,6 +104,7 @@ const Page = () => {
           />
           <label htmlFor="longdescription">Long Desciption</label>
           <input
+            value={longDescription}
             onChange={(e) => setLongDescription(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
@@ -90,6 +113,7 @@ const Page = () => {
           />
           <label htmlFor="size">Size</label>
           <input
+            value={size}
             onChange={(e) => setSize(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
@@ -98,6 +122,7 @@ const Page = () => {
           />
           <label htmlFor="Voltage">Voltage</label>
           <input
+            value={voltage}
             onChange={(e) => setVoltage(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
@@ -106,6 +131,7 @@ const Page = () => {
           />
           <label htmlFor="power">Power</label>
           <input
+            value={power}
             onChange={(e) => setPower(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
@@ -114,6 +140,7 @@ const Page = () => {
           />
           <label htmlFor="Temperature">Temperature</label>
           <input
+            value={temperature}
             onChange={(e) => setTemperature(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
@@ -122,6 +149,7 @@ const Page = () => {
           />
           <label htmlFor="Time">Time</label>
           <input
+            value={time}
             onChange={(e) => setTime(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
@@ -130,14 +158,33 @@ const Page = () => {
           />
           <label htmlFor="speed">Average Speed</label>
           <input
+            value={speed}
             onChange={(e) => setSpeed(e.target.value)}
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
             id="speed"
             required
           />
-         
-          <button disabled={loading}  className="bg-blue-200 h-14 rounded" type="submit">
+          <label htmlFor="Category">Average Speed</label>
+          <select
+            id="Category"
+            className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
+            value={selectedCategory}
+            onChange={(e)=>setSelectedCategory(e.target.value)}
+          >
+            {category.map((item) => {
+              return (
+                <option key={item._id} value={item.name}>
+                  {item.name}
+                </option>
+              );
+            })}
+          </select>
+          <button
+            disabled={loading}
+            className="bg-blue-200 h-14 rounded"
+            type="submit"
+          >
             Create
           </button>
         </form>

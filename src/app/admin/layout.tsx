@@ -1,5 +1,4 @@
 import BottomNavbar from "@/components/AdminNav/BottomNavbar";
-import SideNavbar from "@/components/AdminNav/SideNavbar";
 
 
 export default function RootLayout({
@@ -9,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-    <div>
+    <div className="">
      {children}
      <BottomNavbar/>
     </div>

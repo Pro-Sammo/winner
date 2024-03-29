@@ -1,5 +1,5 @@
 "use client"
-
+ 
 import React from "react";
 import { SearchIcon } from "lucide-react";
 import Logo from "../../../public/logo.svg";
@@ -47,7 +47,7 @@ const NavBar = () => {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button as={Link} color="warning" href="#" variant="flat">
-            Sign Up
+            Contact Us
           </Button>
         </NavbarItem>
       </NavbarContent>

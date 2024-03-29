@@ -14,22 +14,20 @@ export async function POST(req) {
     temperature,
     time,
     speed,
+    category,
   } = await req.json();
-
 
   try {
     await connectDB();
 
-    const alreadyExist = await Item.findOne({model})
-    console.log(alreadyExist)
+    const alreadyExist = await Item.findOne({ model });
 
-    if(alreadyExist){
+    if (alreadyExist) {
       return NextResponse.json(
-        { success: true, message: "Model already exists" },
-        { status: 400}
+        { success: false, message: "Model already exists" },
+        { status: 400 }
       );
     }
-
 
     const newItem = await Item.create({
       model,
@@ -42,10 +40,8 @@ export async function POST(req) {
       temperature,
       time,
       averageSpeed: speed,
+      category: category,
     });
-
-
-
 
     return NextResponse.json(
       { success: true, message: "Item Created Successfully" },

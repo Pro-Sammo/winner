@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/Navbar/Navbar";
 import { Toaster } from "@/components/ui/sonner";
 import {Providers} from "./provider";
-const inter = Inter({ subsets: ["latin"] });
 import NextTopLoader from 'nextjs-toploader';
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "WINNER MACHINERIES",
@@ -33,7 +32,10 @@ export default function RootLayout({
         speed={200}
         zIndex={100}
         />
+
         {children}
+
+        <Footer/>
         <Toaster />
         </Providers>
       </body>

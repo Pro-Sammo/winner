@@ -1,15 +1,15 @@
-import type { Config } from "tailwindcss"
-import {nextui} from "@nextui-org/react"
+import type { Config } from "tailwindcss";
+import { nextui } from "@nextui-org/react";
 
 const config = {
   darkMode: ["class"],
   content: [
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -76,7 +76,11 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"),nextui(),require("tailwind-scrollbar")],
-} satisfies Config
+  plugins: [
+    require("tailwindcss-animate"),
+    nextui(),
+    require("tailwind-scrollbar"),
+  ],
+} satisfies Config;
 
-export default config
+export default config;

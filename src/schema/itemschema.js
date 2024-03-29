@@ -1,4 +1,5 @@
 import { Schema, model, models } from "mongoose";
+import mongoose from "mongoose";
 
 const itemSchema = new Schema({
   model: {
@@ -39,6 +40,10 @@ const itemSchema = new Schema({
   averageSpeed: {
     type: String,
   },
+  category:{
+    type: mongoose.Schema.Types.ObjectId,
+    ref:"Category"
+  }
 });
 
 const Item = models.Item || model("Item", itemSchema);
