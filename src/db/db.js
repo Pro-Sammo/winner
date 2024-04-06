@@ -4,7 +4,7 @@ const connectDB = () => {
   var isConnected = false;
   if (!isConnected) {
     mongoose
-      .connect("mongodb://127.0.0.1:27017", {
+      .connect("mongodb+srv://sssammo7:HxlBxkAddlctNE5K@cluster0.lxb8ypk.mongodb.net", {
         dbName: "Winner",
       })
       .then(() => {
