@@ -7,7 +7,7 @@ export async function POST(req) {
     const { name } = await req.json();
     connectDB();
     const categoryExist = await Category.findOne({ name: name });
-    if (categoryExist)
+    if (!categoryExist)
       return NextResponse.json(
         { success: false, message: "Category already exists" },
         { status: 400 }

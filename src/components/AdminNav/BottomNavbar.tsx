@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Upload, Trash2, BarChart2, Eye , ClipboardList } from "lucide-react";
+import { Upload, Trash2, BarChart2, MailPlus , ClipboardList } from "lucide-react";
 import Link from "next/link";
 
 const BottomNavbar = () => {
@@ -26,10 +26,12 @@ const BottomNavbar = () => {
           <p className="font-light text-sm">Create Category</p>
         </div>
         </Link>
+        <Link href={"/admin/contact"}>
         <div className="flex flex-col justify-center items-center">
-          <Trash2 size={20} />
-          <p className="font-light text-sm">Delete</p>
+          <MailPlus size={20} />
+          <p className="font-light text-sm">Contact Box</p>
         </div>
+        </Link>
       </div>
     </>
   );

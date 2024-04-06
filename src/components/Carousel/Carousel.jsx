@@ -10,7 +10,8 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-
+import { Oswald } from "next/font/google";
+const oswald = Oswald({ weight: ["600"], subsets: ["cyrillic"] });
 
 const Carousel = () => {
   const swiperRef = useRef(null);
@@ -28,11 +29,10 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full max-h-fit flex flex-col items-center">
-      <div className="md:w-4/6 w-full px-11">
-        <div className="mb-4">
-          <h1 className="font-medium text-2xl pb-1">Finishing</h1>
-          <div className="h-[1px] w-full bg-blue-900"></div>
+    <div className=" md:px-12 py-6 md:py-8 my-52  md:mx-20 lg:mx-40 xl:mx-80 mx-4 rounded-md flex justify-center items-center">
+      <div className="w-full px-11">
+        <div className="w-full ">
+        <div className={`${oswald.className} ${'text-center text-2xl md:text-3xl lg:text-4xl mb-14 lg:mb-20 '}`}>Videos</div>
         </div>
         <div className="h-full mb-10 w-full">
           <Swiper
@@ -101,12 +101,19 @@ const Carousel = () => {
             </SwiperSlide>
           </Swiper>
           <div className="flex justify-between mt-4">
-          
-              <ArrowLeft  color="orange" className="cursor-pointer z-20" size={30} onClick={goPrev}/>
-            
-            
-              <ArrowRight color="orange" className="cursor-pointer" size={30} onClick={goNext} />
-           
+            <ArrowLeft
+              color="orange"
+              className="cursor-pointer z-20"
+              size={30}
+              onClick={goPrev}
+            />
+
+            <ArrowRight
+              color="orange"
+              className="cursor-pointer"
+              size={30}
+              onClick={goNext}
+            />
           </div>
         </div>
       </div>

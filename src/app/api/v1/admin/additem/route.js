@@ -1,6 +1,7 @@
 import Item from "../../../../../schema/itemschema";
 import connectDB from "../../../../../db/db";
 import { NextResponse } from "next/server";
+import Category from "@/schema/categoryschema";
 
 export async function POST(req) {
   const {
@@ -18,7 +19,7 @@ export async function POST(req) {
   } = await req.json();
 
   try {
-    await connectDB();
+     connectDB();
 
     const alreadyExist = await Item.findOne({ model });
 
@@ -29,7 +30,9 @@ export async function POST(req) {
       );
     }
 
-    const newItem = await Item.create({
+    const ctg = await Category.findOne({ name: category });
+
+    await Item.create({
       model,
       shortDescription,
       longDescription,
@@ -40,7 +43,7 @@ export async function POST(req) {
       temperature,
       time,
       averageSpeed: speed,
-      category: category,
+      category: ctg._id,
     });
 
     return NextResponse.json(

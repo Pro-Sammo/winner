@@ -49,7 +49,8 @@ const Page = () => {
       setLoading(false);
       toast("Created Successfully");
     } catch (error) {
-      toast("Failed to upload");
+      console.log(error)
+      toast(error?.response?.data?.message);
       setLoading(false);
     }
   };

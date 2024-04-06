@@ -2,15 +2,27 @@
 
 import React from "react";
 import { CldImage } from "next-cloudinary";
+import { motion } from "framer-motion";
 
 const CardItem = ({
   public_id,
   title,
   shortDescription,
 }:any) => {
-  console.log(shortDescription)
   return (
-   <div className="group">
+   <motion.div
+   initial={{
+    y:30,
+    opacity:0.5
+   }}
+   whileInView={{
+    y:0,
+    opacity:1
+   }}
+   transition={{
+    duration:0.5,
+   }}
+   className="group">
    <div className="w-80 min-h-fit  pb-6 border border-orange-400 duration-250 group-hover:border-blue-400 shadow-xl rounded-2xl cursor-pointer flex flex-col justify-center items-center">
     <div className="py-8">
       <h1 style={{fontFamily:"Cabinet"}} className="text-center text-gray-700 font-medium text-xl">{title}</h1>
@@ -22,7 +34,7 @@ const CardItem = ({
     <div className="w-[70%] h-[1px] mx-auto my-4 bg-gray-200"></div>
     <button className="font-medium mt-2 px-8 py-3 rounded-full border duration-250 group-hover:border-blue-400 border-orange-400 bg-white">BUY NOW</button>
    </div>
-   </div>
+   </motion.div>
   );
 };
 
