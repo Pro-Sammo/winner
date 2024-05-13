@@ -30,7 +30,7 @@ const Services = () => {
             transition={{
               duration: 0.5,
             }}
-            className="h-[23rem] w-[16rem] duration-1000 transition-all hover:bg-gradient-to-tr hover:from-indigo-400 hover:to-cyan-400  bg-white  rounded-lg flex flex-col items-start pl-8  justify-center gap-4"
+            className="h-[23rem] w-[16rem] duration-1000 transition-all hover:bg-gradient-to-tr hover:bg-[#68ACD9]  bg-white  rounded-lg flex flex-col items-start pl-8  justify-center gap-4"
           >
             <div className="pb-10">
               <div className="p-4 bg-green-500 rounded-full h-full">
@@ -66,7 +66,7 @@ const Services = () => {
             transition={{
               duration: 0.5,
             }}
-            className="h-[23rem]  duration-1000 transition-all hover:bg-gradient-to-tr hover:from-indigo-400 hover:to-cyan-400 w-[16rem] bg-white rounded-lg flex flex-col items-start pl-8  justify-center gap-4"
+            className="h-[23rem]  duration-1000 transition-all hover:bg-gradient-to-tr hover:bg-[#68ACD9]  w-[16rem] bg-white rounded-lg flex flex-col items-start pl-8  justify-center gap-4"
           >
             <div className="pb-10">
               <div className="p-4 bg-pink-500 rounded-full h-full">
@@ -102,7 +102,7 @@ const Services = () => {
             transition={{
               duration: 0.5,
             }}
-            className="h-[23rem] w-[16rem]  duration-1000 transition-all hover:bg-gradient-to-tr hover:from-indigo-400 hover:to-cyan-400 bg-white rounded-lg flex flex-col items-start pl-8  justify-center gap-4"
+            className="h-[23rem] w-[16rem]  duration-1000 transition-all hover:bg-gradient-to-tr hover:bg-[#68ACD9] bg-white rounded-lg flex flex-col items-start pl-8  justify-center gap-4"
           >
             <div className="pb-10">
               <div className="p-4 bg-blue-500 rounded-full h-full">
@@ -138,7 +138,7 @@ const Services = () => {
             transition={{
               duration: 0.5,
             }}
-            className="h-[23rem] w-[16rem]  duration-1000 transition-all hover:bg-gradient-to-tr hover:from-indigo-400 hover:to-cyan-400 bg-white rounded-lg flex flex-col items-start pl-8  justify-center gap-4"
+            className="h-[23rem] w-[16rem]  duration-1000 transition-all hover:bg-gradient-to-tr hover:bg-[#68ACD9] bg-white rounded-lg flex flex-col items-start pl-8  justify-center gap-4"
           >
             <div className="pb-10">
               <div className="p-4 bg-purple-500 rounded-full h-full">

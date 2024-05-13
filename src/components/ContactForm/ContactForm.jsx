@@ -68,7 +68,7 @@ const ContactForm = () => {
           </div>
         </div>
         <form
-          className="flex flex-col justify-center bg-white p-11 rounded-lg"
+          className="flex flex-col justify-center bg-[#68ACD9] p-11 rounded-lg"
           onSubmit={(e) => handleContactFormSubmit(e)}
         >
           <div>
@@ -80,7 +80,7 @@ const ContactForm = () => {
                 type="text"
                 placeholder="First Name*"
                 style={{ fontFamily: "Cabinet" }}
-                className="bg-gray-100 border-white h-12 border focus:border-orange-400 placeholder:text-orange-600 rounded-md pl-6 outline-none"
+                className="bg-gray-100 border-white h-12 border focus:border-[#73A5DB] placeholder:text-[#73A5DB] rounded-md pl-6 outline-none"
               />
               <input
                 value={lastName}
@@ -89,7 +89,7 @@ const ContactForm = () => {
                 type="text"
                 placeholder="Last Name*"
                 style={{ fontFamily: "Cabinet" }}
-                className="bg-gray-100 border-white h-12 border focus:border-orange-400 placeholder:text-orange-600 rounded-md pl-6 outline-none"
+                className="bg-gray-100 border-white h-12 border focus:border-[#73A5DB] placeholder:text-[#73A5DB] rounded-md pl-6 outline-none"
               />
               <input
                 value={email}
@@ -97,7 +97,7 @@ const ContactForm = () => {
                 type="email"
                 placeholder="Email"
                 style={{ fontFamily: "Cabinet" }}
-                className="bg-gray-100 border-white h-12 border focus:border-orange-400 placeholder:text-orange-600 rounded-md pl-6 outline-none"
+                className="bg-gray-100 border-white h-12 border focus:border-[#73A5DB] placeholder:text-[#73A5DB] rounded-md pl-6 outline-none"
               />
               <input
                 value={phone}
@@ -106,7 +106,7 @@ const ContactForm = () => {
                 type="text"
                 placeholder="Phone*"
                 style={{ fontFamily: "Cabinet" }}
-                className="bg-gray-100 border-white h-12 border focus:border-orange-400 placeholder:text-orange-600 rounded-md pl-6 outline-none"
+                className="bg-gray-100 border-white h-12 border focus:border-[#73A5DB] placeholder:text-[#73A5DB] rounded-md pl-6 outline-none"
               />
             </div>
             <div className="w-full ">
@@ -117,7 +117,7 @@ const ContactForm = () => {
                 type="text"
                 placeholder="Address*"
                 style={{ fontFamily: "Cabinet" }}
-                className="bg-gray-100 mt-3 border-white w-full h-12 border focus:border-orange-400 placeholder:text-orange-600  rounded-md pl-6 outline-none"
+                className="bg-gray-100 mt-3 border-white w-full h-12 border focus:border-[#73A5DB] placeholder:text-[#73A5DB]  rounded-md pl-6 outline-none"
               />
               <textarea
                 maxLength={255}
@@ -126,7 +126,7 @@ const ContactForm = () => {
                 type="text"
                 placeholder="Type you message here"
                 style={{ fontFamily: "Cabinet" }}
-                className="bg-gray-100 border-white mt-3 w-full h-24 border pt-4 focus:border-orange-400 placeholder:text-orange-600  rounded-md pl-6 outline-none"
+                className="bg-gray-100 border-white mt-3 w-full h-24 border pt-4  focus:border-[#73A5DB] placeholder:text-[#73A5DB]  rounded-md pl-6 outline-none"
               />
             </div>
           </div>

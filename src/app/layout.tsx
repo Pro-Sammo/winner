@@ -1,3 +1,4 @@
+"use client"
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/Navbar/Navbar";
@@ -5,11 +6,10 @@ import { Toaster } from "@/components/ui/sonner";
 import {Providers} from "./provider";
 import NextTopLoader from 'nextjs-toploader';
 import Footer from "@/components/Footer/Footer";
+import SmoothScroll from '@/components/SmoothScroll'
+import CustomCursor from "@/components/CustomCursor";
 
-export const metadata: Metadata = {
-  title: "WINNER MACHINERIES",
-  description: "Created by Sammo",
-};
+
 
 export default function RootLayout({
   children,
@@ -19,6 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" bg-[#FAFAF9]">
+      <SmoothScroll/>
+      <CustomCursor/>
       <Providers>
         <NavBar />
         <NextTopLoader
@@ -36,7 +38,12 @@ export default function RootLayout({
         {children}
 
         <Footer/>
-        <Toaster />
+        <Toaster richColors position="top-right" toastOptions={{
+          style:{
+            backgroundColor:"#68ACD9",
+            borderColor:"white"
+          }
+        }}/>
         </Providers>
       </body>
     </html>

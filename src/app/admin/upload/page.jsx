@@ -20,8 +20,6 @@ const Page = () => {
   const [category, setCategory] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
 
-
-
   const submitHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -39,7 +37,7 @@ const Page = () => {
           temperature: temperature,
           time: time,
           speed: speed,
-          category:selectedCategory
+          category: selectedCategory,
         },
         {
           headers: {
@@ -51,7 +49,7 @@ const Page = () => {
       setLoading(false);
       toast("Created Successfully");
     } catch (error) {
-      console.log(error)
+      console.log(error);
       toast(error?.response?.data?.message);
       setLoading(false);
     }
@@ -59,7 +57,7 @@ const Page = () => {
 
   const getAllCategory = async () => {
     try {
-      const res = await axios.get("/api/v1/admin/getcategory");
+      const res = await axios.post("/api/v1/admin/getcategory");
       const result = res.data;
       setCategory(result);
     } catch (error) {
@@ -73,7 +71,7 @@ const Page = () => {
 
   return (
     <>
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center pt-24">
         <form
           className="flex flex-col gap-2 p-2 mb-12 w-full md:w-96"
           onSubmit={submitHandler}
@@ -166,14 +164,13 @@ const Page = () => {
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             type="text"
             id="speed"
-            required
           />
           <label htmlFor="Category">Average Speed</label>
           <select
             id="Category"
             className="outline-blue-200 border rounded border-blue-200 py-2 px-1"
             value={selectedCategory}
-            onChange={(e)=>setSelectedCategory(e.target.value)}
+            onChange={(e) => setSelectedCategory(e.target.value)}
           >
             {category.map((item) => {
               return (

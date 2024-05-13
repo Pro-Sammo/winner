@@ -2,7 +2,7 @@ import Item from "../../../../../schema/itemschema";
 import connectDB from "../../../../../db/db";
 import { NextResponse } from "next/server";
 
-export async function GET(res) {
+export async function POST(res) {
  try {
   connectDB()
   const allItem = await Item.find();
@@ -23,6 +23,4 @@ export async function GET(res) {
     { status: 400 }
   );
  }
-
- 
 }

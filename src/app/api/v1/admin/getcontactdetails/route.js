@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import connectDB from "../../../../../db/db";
 import Contact from "../../../../../schema/contactschema";
 
-export async function GET(req) {
+export async function POST(req) {
   try {
     connectDB();
     const contactDetails = await Contact.find();

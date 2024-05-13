@@ -102,14 +102,14 @@ const Carousel = () => {
           </Swiper>
           <div className="flex justify-between mt-4">
             <ArrowLeft
-              color="orange"
+              color="#68ACD9"
               className="cursor-pointer z-20"
               size={30}
               onClick={goPrev}
             />
 
             <ArrowRight
-              color="orange"
+              color="#68ACD9"
               className="cursor-pointer"
               size={30}
               onClick={goNext}

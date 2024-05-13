@@ -33,35 +33,26 @@ export default function Navbar() {
 
   const getAllCategory = async () => {
     try {
-      const res = await axios.get("/api/v1/admin/getcategory");
+      const res = await axios.post("/api/v1/admin/getcategory");
       const result = res.data;
       setCategory(result);
     } catch (error) {}
   };
-
-  console.log(category);
 
   useEffect(() => {
     getAllCategory();
   }, []);
 
   return (
-    <motion.header className="bg-black">
+    <motion.header>
       <motion.nav
-        initial={{
-          y: -50,
-        }}
-        animate={{
-          y: 0,
-        }}
-        transition={{duration:1}}
-        className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
+      id="navBlur"
+        className="mx-auto flex max-w-full items-center justify-between py-6 lg:px-20 md:px-12 bg-[#519fd2a7] fixed top-0 right-0 left-0 z-50 backdrop-blur-sm"
         aria-label="Global"
       >
-        <div className="flex justify-center items-center lg:flex-1 max-h-6">
+        <div className="flex justify-center items-center  max-h-6">
           <a href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">Your Company</span>
-            <Image src={Logo} width={400} alt="logo" className="w-40 md:w-64" />
+            <Image src={Logo} width={400} alt="logo" className="w-96" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -76,11 +67,14 @@ export default function Navbar() {
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
+            <Popover.Button
+              className="group flex items-center gap-x-1 text-lg border-none outline-none font-semibold leading-6 text-white"
+            >
               Category
               <ChevronDownIcon
-                className="h-5 w-5 flex-none text-gray-400"
+                className="h-5 w-5 flex-none group-hover:rotate-180 duration-150 "
                 aria-hidden="true"
+
               />
             </Popover.Button>
 
@@ -93,17 +87,17 @@ export default function Navbar() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute  -left-8 top-full z-10 mt-3 w-screen max-w-sm overflow-hidden rounded-3xl text-white shadow-lg ring-1 ">
-                <div className="p-4">
+              <Popover.Panel className="absolute bg-[#579ecd7a] -left-8 top-full z-10 mt-3 w-screen  max-w-sm overflow-hidden rounded text-white shadow-lg  ">
+                <div className="p-4 bg-transparent ">
                   {category.map((item) => (
                     <div
                       key={item.name}
-                      className="group text-white relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-900"
+                      className="group hover:shadow-md duration-250 hover:ring-2 cursor-pointer text-white relative flex items-center gap-x-6 mb-2 rounded-lg p-4 text-sm leading-6 bg-gray-100"
                     >
-                      <div className="flex-auto text-white">
+                      <div className="flex-auto text-[#2072A9]">
                         <a
                           href={item.href}
-                          className="block font-semibold  text-white"
+                          className="block font-semibold  text-[#2072A9]"
                         >
                           {item.name}
                           <span className="absolute inset-0" />
@@ -116,21 +110,19 @@ export default function Navbar() {
             </Transition>
           </Popover>
 
-          <a href="/product" className="text-sm font-semibold leading-6 text-white">
+          <a
+            href="/product"
+            className="text-lg font-semibold leading-6 text-white "
+          >
             Products
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
-            Marketplace
+          <a href="/about" className="text-lg font-semibold leading-6 text-white">
+            About Us
           </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
+          <a href="#" className="text-lg font-semibold leading-6 text-white">
             Company
           </a>
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
       </motion.nav>
       <Dialog
         as="div"
@@ -175,35 +167,26 @@ export default function Navbar() {
                         />
                       </Disclosure.Button>
                       <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...products, ...callsToAction].map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
+                        
                       </Disclosure.Panel>
                     </>
                   )}
                 </Disclosure>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
                 >
                   Features
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
                 >
                   Marketplace
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-50"
                 >
                   Company
                 </a>
