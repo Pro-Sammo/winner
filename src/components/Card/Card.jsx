@@ -25,7 +25,7 @@ const Card = () => {
     fetchAsyncData();
   }, []);
   return (
-    <div className=" md:px-12 py-6 md:py-8 my-52  md:mx-20 lg:mx-40 xl:mx-80 mx-4 rounded-md flex justify-center items-center">
+    <div className="  py-6 md:py-8 my-52  mx-auto">
       <div className=" w-full py-6 rounded-lg px-10">
         <div className="w-full ">
           <div
@@ -36,7 +36,7 @@ const Card = () => {
             Product Store
           </div>
         </div>
-        <div className="py-8 flex flex-wrap -ml-2 md:ml-0 xl:gap-16 lg:gap-10 md:gap-20 gap-8">
+        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-16 lg:gap-10 md:flex-row  gap-8 py-8 mx-auto">
           {data?.map((item) => (
             <Link href={`/product/${item._id}`} id={item._id}>
               <CardItem

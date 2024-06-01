@@ -8,27 +8,23 @@ import CardItem from "../CardItem/CardItem";
 import Link from "next/link";
 
 const Productdetailes = ({ params }) => {
-
   const [item, setItem] = useState();
   const [id, setId] = useState("");
   const [searchCategory, setSearchCategory] = useState("");
   const [data, setData] = useState([]);
+
 
   const fetchAsyncCategory = async () => {
     try {
       const response = await axios.post(
         `/api/v1/admin/categorywiseitem?category=${searchCategory}`
       );
-      const result = await response.data;
+      const result = response.data;
       setData(result);
     } catch (error) {
       toast("Product fetch failed");
     }
   };
-
-  setTimeout(() => {
-    fetchAsyncCategory()
-  }, 500);
 
   const fetchAsyncData = async () => {
     try {
@@ -45,12 +41,15 @@ const Productdetailes = ({ params }) => {
   };
 
   useEffect(() => {
-    fetchAsyncCategory();
-  }, [searchCategory]);
-
-  useEffect(() => {
     fetchAsyncData();
   }, []);
+
+
+  useEffect(() => {
+    if (searchCategory) {
+      fetchAsyncCategory();
+    }
+  }, [searchCategory]);
 
   return (
     <div className="min-h-screen w-full  pt-24">
@@ -206,7 +205,7 @@ const Productdetailes = ({ params }) => {
       </div>
       <div className="w-full">
         <div className="md:ml-20 ml-10 text-2xl font-bold">Related Product</div>
-        <div className="min-h-fit grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-8 md:gap-16 py-8  px-10 md:px-20">
+        <div className="min-h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-8 md:gap-16 py-8  px-10 md:px-20">
           {data?.map((item) => (
             <Link href={`/product/${item._id}`} id={item._id}>
               <CardItem

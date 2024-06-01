@@ -54,7 +54,7 @@ const Page = () => {
           );
         })}
       </div>
-      <div className=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:gap-16 lg:gap-10 md:flex-row  gap-8 py-8 mx-auto">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-16 lg:gap-10 md:flex-row  gap-8 py-8 mx-auto">
         {data?.map((item) => (
           <Link href={`/product/${item._id}`} id={item._id}>
             <CardItem
