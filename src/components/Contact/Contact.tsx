@@ -2,7 +2,7 @@ import React from "react";
 import { MapPinIcon } from "lucide-react";
 import { Mail } from "lucide-react";
 import { Phone } from "lucide-react";
-import Logo from "../../../public/logo.svg";
+import Logo from "../../../public/logo.png";
 import Image from "next/image";
 
 const Contact = () => {

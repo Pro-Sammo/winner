@@ -19,7 +19,7 @@ import {
 import Image from "next/image";
 import axios from "axios";
 
-import Logo from "../../../public/logo.svg";
+import Logo from "../../../public/logo.png";
 
 import { motion } from "framer-motion";
 
