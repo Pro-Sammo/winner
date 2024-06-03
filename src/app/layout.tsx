@@ -8,7 +8,7 @@ import NextTopLoader from 'nextjs-toploader';
 import Footer from "@/components/Footer/Footer";
 import SmoothScroll from '@/components/SmoothScroll'
 import CustomCursor from "@/components/CustomCursor";
-
+import { Analytics } from "@vercel/analytics/react"
 
 
 export default function RootLayout({
@@ -19,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" bg-[#FAFAF9]">
-      {/* <SmoothScroll/> */}
-      {/* <CustomCursor/> */}
+      <SmoothScroll/>
+      <CustomCursor/>
       <Providers>
         <NavBar />
         <NextTopLoader
