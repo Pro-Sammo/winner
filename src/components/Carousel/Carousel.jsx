@@ -42,7 +42,7 @@ const Carousel = () => {
             slidesPerView={3}
             loop
             breakpoints={{
-              400: {
+              380: {
                 slidesPerView: 1,
               },
               768: {

@@ -1,5 +1,5 @@
 "use client"
-import type { Metadata } from "next";
+
 import "./globals.css";
 import NavBar from "@/components/Navbar/Navbar";
 import { Toaster } from "@/components/ui/sonner";
@@ -19,8 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" bg-[#FAFAF9]">
-      <SmoothScroll/>
-      <CustomCursor/>
+      {/* <SmoothScroll/> */}
+      {/* <CustomCursor/> */}
       <Providers>
         <NavBar />
         <NextTopLoader

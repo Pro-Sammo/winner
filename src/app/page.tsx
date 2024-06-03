@@ -9,7 +9,7 @@ import Brand from '@/components/Brand/Brand'
 export default function Home() {
   return (
     <>
-      <div>
+      <div className="w-full">
         <Hero />
         <Brand/>
         <Card />

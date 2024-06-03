@@ -72,7 +72,7 @@ export default function Navbar() {
             >
               Category
               <ChevronDownIcon
-                className="h-5 w-5 flex-none group-hover:rotate-180 duration-150 "
+                className="h-5 w-5 flex-none "
                 aria-hidden="true"
 
               />

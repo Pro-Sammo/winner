@@ -19,7 +19,7 @@ const Contact = () => {
             <MapPinIcon color="#FFA500" />
             <div>
               <p className="font-bold text-lg">Out Main Branch</p>
-              <p>Mirpur-10, Dhaka, Bangladesh</p>
+              <p>Mirpur-1, Dhaka, Bangladesh</p>
             </div>
           </div>
         </div>
@@ -28,7 +28,7 @@ const Contact = () => {
             <Mail color="#FFA500" />
             <div>
               <p className="font-bold text-lg">Email Us</p>
-              <p>info@winner.com</p>
+              <p><a href="mailTo:winnermachineries@gmail.com">winnermachineries@gmail.com</a></p>
             </div>
           </div>
         </div>
@@ -37,7 +37,8 @@ const Contact = () => {
             <Phone color="#FFA500" />
             <div>
               <p className="font-bold text-lg">Phone Us</p>
-              <p>+8801745362847</p>
+              <p>+8801818261224</p>
+              <p>+8801918261224</p>
             </div>
           </div>
         </div>

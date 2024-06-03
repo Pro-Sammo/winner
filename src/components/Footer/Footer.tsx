@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-2 items-center">
             <ArrowRight size={20} />
-            <div className="cursor-pointer">Facebook</div>
+            <div className="cursor-pointer"><a href="https://www.facebook.com/profile.php?id=100057395593720" target="_blank">Facebook</a></div>
           </div>
           <div className="flex gap-2 items-center">
             <ArrowRight size={20} />
