@@ -19,7 +19,6 @@ export default function RootLayout({
     <html lang="en">
       <body className=" bg-[#FAFAF9]">
         <SmoothScroll />
-        <CustomCursor />
         <Providers>
           <NavBar />
           <NextTopLoader

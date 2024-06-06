@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-3">
             <div className="h-5 w-1 bg-yellow-300"></div>
-            <div className="font-bold text-xl ">Out Location</div>
+            <div className="font-bold text-xl ">Main Office</div>
           </div>
           <p className="w-60">
-            Shop no. 192. Misco Super Market, 4 Darussalam Road,Mirpur-1 ,
+            Shop no. 104. Misco Super Market, 4 Darussalam Road,Mirpur-1 ,
             Dhaka-1216, Bangladesh
           </p>
         </div>

@@ -18,8 +18,8 @@ const Contact = () => {
           <div className="flex items-center gap-4">
             <MapPinIcon color="#FFA500" />
             <div>
-              <p className="font-bold text-lg">Out Main Branch</p>
-              <p>Mirpur-1, Dhaka, Bangladesh</p>
+              <p className="font-bold text-lg">Factory</p>
+              <p>kha/97, 1-E, North Bishil, Diyabari, Beribadh Road, Mirpur-1, Dhaka-1216.</p>
             </div>
           </div>
         </div>
@@ -37,8 +37,8 @@ const Contact = () => {
             <Phone color="#FFA500" />
             <div>
               <p className="font-bold text-lg">Phone Us</p>
-              <p>+8801818261224</p>
-              <p>+8801918261224</p>
+              <p>+8801818-261224</p>
+              <p>+8801919-361224</p>
             </div>
           </div>
         </div>

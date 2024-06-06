@@ -14,11 +14,10 @@ import {EffectFade, Navigation, Pagination ,Autoplay} from 'swiper/modules';
 
 import Image from 'next/image';
 
-import sliderImage01 from "../../../public/001.jpg"
-import sliderImage02 from "../../../public/002.jpg"
-import sliderImage04 from "../../../public/004.jpg"
-import sliderImage05 from "../../../public/005.jpg"
-import sliderImage06 from "../../../public/006.jpg"
+import sliderImage01 from "../../../public/01.jpg"
+import sliderImage02 from "../../../public/02.jpg"
+import sliderImage03 from "../../../public/03.jpg"
+
 
  const Hero =()=> {
   return (
@@ -41,9 +40,8 @@ import sliderImage06 from "../../../public/006.jpg"
       >
         <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage01}/></SwiperSlide>
         <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage02}/></SwiperSlide>
-        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage04}/></SwiperSlide>
-        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage05}/></SwiperSlide>
-        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage06}/></SwiperSlide>
+        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage03}/></SwiperSlide>
+
 
 
       </Swiper>

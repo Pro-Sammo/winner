@@ -57,7 +57,7 @@ const ContactForm = () => {
 
   return (
     <>
-      <div className="px-4 md:px-12 py-6 md:py-8 my-52 md:mx-20 lg:mx-40 xl:mx-64 mx-4 ">
+      <div className="px-2 md:px-12 py-6 md:py-8 my-52 md:mx-20 lg:mx-40 xl:mx-64 mx-2 ">
         <div className="w-full">
           <div
             className={`${
@@ -68,7 +68,7 @@ const ContactForm = () => {
           </div>
         </div>
         <form
-          className="flex flex-col justify-center bg-[#68ACD9] p-11 rounded-lg"
+          className="flex flex-col justify-center bg-[#68ACD9] p-6 md:p-11 rounded-lg"
           onSubmit={(e) => handleContactFormSubmit(e)}
         >
           <div>
