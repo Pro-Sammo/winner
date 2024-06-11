@@ -56,7 +56,7 @@ const Carousel = () => {
             <SwiperSlide>
               <iframe
                 className="w-full h-60"
-                src="https://www.youtube.com/embed/kL49aR2kjU8"
+                src="https://www.youtube.com/watch?v=_WnfQQkPssc"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -65,7 +65,7 @@ const Carousel = () => {
             <SwiperSlide>
               <iframe
                 className="w-full h-60"
-                src="https://www.youtube.com/embed/kL49aR2kjU8"
+                src="https://www.youtube.com/watch?v=fAu8KNIypBg"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -75,7 +75,7 @@ const Carousel = () => {
               {" "}
               <iframe
                 className="w-full h-60"
-                src="https://www.youtube.com/embed/kL49aR2kjU8"
+                src="https://www.youtube.com/watch?v=qx0opxvcfq8"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -84,16 +84,7 @@ const Carousel = () => {
             <SwiperSlide>
               <iframe
                 className="w-full h-60"
-                src="https://www.youtube.com/embed/kL49aR2kjU8"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </SwiperSlide>
-            <SwiperSlide>
-              <iframe
-                className="w-full h-60"
-                src="https://www.youtube.com/embed/kL49aR2kjU8"
+                src="https://www.youtube.com/watch?v=LBgMFI1aArA"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
