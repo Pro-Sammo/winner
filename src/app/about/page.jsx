@@ -27,8 +27,7 @@ const Page = () => {
             } ${"md:w-[30rem] w-[26rem] text-center font-semibold text-sm md:text-lg text-[#68ACD9] "}`}
           >
           <h1 className="text-2xl font-bold mt-20">Address:</h1>
-           <p> Shop no. 192. Misco Super Market, 4 Darussalam Road,<br /> Mirpur-1 ,
-            Dhaka-1216, Bangladesh</p>
+           <p> Shop no. 104. Misco Super Market, 4 Darussalam Road, <br/> Mirpur-1 , Dhaka-1216, Bangladesh.</p>
           </div>
         </div>
       </div>
