@@ -1,13 +1,12 @@
 "use client"
 
+import { Spin } from "antd";
 import React from "react";
 
 const Loading = () => {
   return (
     <div className=" min-h-screen w-full relative flex justify-center items-center">
-      <div className="loader relative inset-0">
-        <div className="absolute h-12 w-12 rounded-full animate"></div>
-      </div>
+      <Spin size="large" />
     </div>
   );
 };

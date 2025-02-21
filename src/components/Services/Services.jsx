@@ -14,11 +14,11 @@ import fbImage4 from "../../../public/fbImage4.jpg";
 const Services = () => {
   return (
     <>
-      <motion.div className="  md:px-12 py-6 md:py-8 my-52  md:mx-20 lg:mx-40 xl:mx-80 mx-4 rounded-md flex flex-col justify-center items-center">
+      <motion.div className="  md:px-12 py-6 md:py-8 my-5  md:mx-20 lg:mx-40 xl:mx-80 mx-4 rounded-md flex flex-col justify-center items-center">
         <div
           className={`${
             oswald.className
-          } ${"text-center text-2xl md:text-3xl lg:text-4xl mb-14 lg:mb-20 "}`}
+          } ${"text-center text-2xl md:text-3xl lg:text-4xl mb-14 lg:mb-20"}`}
         >
           Gallery
         </div>

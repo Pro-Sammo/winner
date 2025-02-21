@@ -7,7 +7,6 @@ import { toast } from "sonner";
 
 const Page = ({ params }) => {
   const [resource, setResource] = useState();
-  console.log(resource);
   const id = params.id;
 
   const handleUploadImage = async () => {

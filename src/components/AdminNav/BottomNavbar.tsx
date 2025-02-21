@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Upload, Trash2, BarChart2, MailPlus , ClipboardList } from "lucide-react";
+import { Upload,  BarChart2, MailPlus , ClipboardList, Video } from "lucide-react";
 import Link from "next/link";
 
 const BottomNavbar = () => {
@@ -17,19 +17,26 @@ const BottomNavbar = () => {
         <Link href={"/admin/upload"}>
           <div className="flex flex-col justify-center items-center">
             <Upload size={20} />
-            <p className="font-light text-sm">Create Product</p>
+            <p className="font-light text-sm">Product</p>
           </div>
         </Link>
         <Link href={"/admin/createCategory"}>
         <div className="flex flex-col justify-center items-center">
           <ClipboardList size={20} />
-          <p className="font-light text-sm">Create Category</p>
+          <p className="font-light text-sm">Category</p>
         </div>
         </Link>
         <Link href={"/admin/contact"}>
         <div className="flex flex-col justify-center items-center">
           <MailPlus size={20} />
           <p className="font-light text-sm">Contact Box</p>
+        </div>
+        </Link>
+
+        <Link href={"/admin/uploadVideo"}>
+        <div className="flex flex-col justify-center items-center">
+          <Video size={20} />
+          <p className="font-light text-sm">Video</p>
         </div>
         </Link>
       </div>

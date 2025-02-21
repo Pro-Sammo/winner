@@ -7,7 +7,6 @@ export async function POST(req,res) {
     connectDB();
 
     const allCategory = await Category.find();
-    console.log(allCategory)
     if (!allCategory)
       return NextResponse.json(
         { success: false, message: "No Category Available" },

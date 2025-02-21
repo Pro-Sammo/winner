@@ -38,9 +38,9 @@ import sliderImage03 from "../../../public/03.jpg"
         modules={[Navigation, Pagination, Autoplay ,EffectFade]}
         className="mySwiper w-full h-fit mt-[4.5rem]"
       >
-        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage01}/></SwiperSlide>
-        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage02}/></SwiperSlide>
-        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage03}/></SwiperSlide>
+        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage01} className='object-cover'/></SwiperSlide>
+        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage02} className='object-cover'/></SwiperSlide>
+        <SwiperSlide className='w-screen h-screen object-cover'><Image src={sliderImage03} className='object-cover'/></SwiperSlide>
 
 
 
