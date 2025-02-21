@@ -57,8 +57,8 @@ const Brand = () => {
               pauseOnMouseEnter: false,
             }}
             breakpoints={{
-              300: { slidesPerView: 3 },
-              768: { slidesPerView: 4 },
+              300: { slidesPerView: 2 },
+              768: { slidesPerView: 2 },
               1024: { slidesPerView: 5 },
             }}
 
