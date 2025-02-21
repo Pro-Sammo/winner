@@ -26,7 +26,6 @@ import sliderImage03 from "../../../public/03.jpg"
         dir="ltr"
         loop
         effect={'fade'}
-        navigation={true}
         pagination={{
           clickable: true,
         }}
